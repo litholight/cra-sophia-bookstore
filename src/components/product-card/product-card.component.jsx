@@ -4,12 +4,12 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import "./product-card.styles.scss";
 
-const ProductCard = ({ children }) => (
+const ProductCard = ({ children, productImage }) => (
   <div className="product-card">
     <div
       className="image"
       style={{
-        backgroundImage: "url(/book-images/IDC.jpg)"
+        backgroundImage: `url(${productImage})`
       }}
     />
     <CustomButton> Add to Cart </CustomButton>
