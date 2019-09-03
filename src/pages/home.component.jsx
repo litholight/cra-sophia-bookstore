@@ -1,9 +1,12 @@
 import React from "react";
 
+import NewArrivals from "../components/new-arrivals/new-arrivals.component";
+import BestSellers from "../components/best-sellers/best-sellers.component";
+
 const Homepage = () => (
   <div>
-    <h3>New Arrivals</h3>
-    <h3>Best Sellers</h3>
+    <NewArrivals />
+    <BestSellers />
   </div>
 );
 
