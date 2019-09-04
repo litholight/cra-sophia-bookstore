@@ -4,6 +4,7 @@ import "./App.css";
 
 import Homepage from "./pages/home.component";
 import Header from "./components/header/header.component";
+import SignInSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 
 class App extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/signin" component={SignInSignUp} />
         </Switch>
       </div>
     );
