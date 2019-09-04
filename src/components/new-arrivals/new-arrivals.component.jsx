@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 import ProductCard from "../product-card/product-card.component";
 
@@ -17,14 +18,16 @@ class NewArrivals extends React.Component {
 
   render() {
     const { bookData } = this.state;
-    console.log(bookData);
     return (
       <div className="new-arrivals-container">
         <div className="new-arrivals-header">
           <h2>New Arrivals</h2>
         </div>
-        {bookData.map(({ id, ...otherBookProps }) => (
-          <ProductCard key={id} {...otherBookProps} />
+        {bookData.map(({ id, createdAt, ...otherBookProps }) => (
+          <div key={id}>
+            <ProductCard {...otherBookProps} />
+            <span>Added {moment(createdAt, "MMDDYYYY").fromNow()}</span>
+          </div>
         ))}
       </div>
     );
