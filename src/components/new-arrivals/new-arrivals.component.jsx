@@ -21,7 +21,7 @@ class NewArrivals extends React.Component {
     return (
       <div className="new-arrivals-container">
         <div className="new-arrivals-header">
-          <h3>New Arrivals</h3>
+          <h2>New Arrivals</h2>
         </div>
         {bookData.map(({ id, ...otherBookProps }) => (
           <ProductCard key={id} {...otherBookProps} />
