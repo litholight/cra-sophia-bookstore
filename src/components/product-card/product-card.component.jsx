@@ -14,7 +14,6 @@ const ProductCard = ({ children, productImage, title }) => (
     />
     <div className="product-title">{title}</div>
     <CustomButton> Add to Cart </CustomButton>
-    <CustomButton> Share </CustomButton>
   </div>
 );
 

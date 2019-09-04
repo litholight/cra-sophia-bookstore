@@ -1,13 +1,15 @@
 .custom-button {
-  height: 40px;
-  background-color: rgb(67, 98, 184);
-  margin: 5px;
+  height: 35px;
+  background-color: rgb(90, 58, 195);
+  margin: 1px;
   border: none;
   color: white;
   font-weight: bold;
-  font-size: 15px;
-  width: 40%;
+  font-size: 13px;
+  width: 65%;
   cursor: pointer;
   position: relative;
-  top: -60px;
+  padding: 8px;
+  top: -45px;
+  text-transform: uppercase;
 }
