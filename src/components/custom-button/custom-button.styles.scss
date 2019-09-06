@@ -14,10 +14,8 @@
   text-transform: uppercase;
 
   &:hover {
-    .custom-button {
-      background-color: white;
-      color: rgb(90, 58, 195);
-      
-    }
+    background-color: white;
+    color: rgb(90, 58, 195);
+    border: 1px solid black;
   }
 }

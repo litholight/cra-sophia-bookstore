@@ -1,11 +1,12 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-
-import { ReactComponent as Logo } from "../../assets/ssfw.svg";
+import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropDown from "../cart-dropdown/cart-dropdown.component";
 
 import "./header.styles.scss";
 
-const Header = () => (
+const Header = ({ currentUser, hidden }) => (
   <div className="header">
     Sophia's Bookstore
     <div className="options">
@@ -18,8 +19,15 @@ const Header = () => (
       <Link className="option" to="/signin">
         SIGN IN
       </Link>
+      <CartIcon />
     </div>
+    {hidden ? null : <CartDropDown />}
   </div>
 );
 
-export default Header;
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden
+});
+
+export default connect(mapStateToProps)(Header);
