@@ -8,7 +8,7 @@ import "./header.styles.scss";
 
 const Header = ({ currentUser, hidden }) => (
   <div className="header">
-    Sophia's Bookstore
+    <div className="store-name">Sophia's Bookstore</div>
     <div className="options">
       <Link className="option" to="/ ">
         SHOP

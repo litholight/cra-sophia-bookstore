@@ -2,13 +2,16 @@
   font-family: 'Rufina', serif;
   background-color: rgb(90, 58, 195);
   padding: 20px;
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
-  font-size: 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.store-name{
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  font-size: 40px;
 }
 
 h1 {

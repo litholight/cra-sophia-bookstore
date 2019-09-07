@@ -17,16 +17,15 @@ class NewArrivals extends React.Component {
   }
 
   render() {
-    const { bookData } = this.state;
     return (
       <div className="new-arrivals-container">
         <div className="new-arrivals-header">
           <h2>New Arrivals</h2>
         </div>
-        {bookData.map(({ id, createdAt, ...otherBookProps }) => (
-          <div key={id}>
-            <ProductCard {...otherBookProps} />
-            <span>Added {moment(createdAt, "MMDDYYYY").fromNow()}</span>
+        {this.state.bookData.map(item => (
+          <div className="product-info" key={item.id}>
+            <ProductCard item={item} />
+            Added {moment(item.createdAt, "MMDDYYYY").fromNow()}
           </div>
         ))}
       </div>
