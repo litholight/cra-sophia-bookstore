@@ -23,9 +23,11 @@ class NewArrivals extends React.Component {
           <h2>New Arrivals</h2>
         </div>
         {this.state.bookData.map(item => (
-          <div className="product-info" key={item.id}>
+          <div key={item.id}>
             <ProductCard item={item} />
-            Added {moment(item.createdAt, "MMDDYYYY").fromNow()}
+            <div className="product-info">
+              Added {moment(item.createdAt, "MMDDYYYY").fromNow()}
+            </div>
           </div>
         ))}
       </div>

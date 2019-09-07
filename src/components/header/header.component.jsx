@@ -10,7 +10,7 @@ const Header = ({ currentUser, hidden }) => (
   <div className="header">
     <div className="store-name">Sophia's Bookstore</div>
     <div className="options">
-      <Link className="option" to="/ ">
+      <Link className="option" to="/">
         SHOP
       </Link>
       <Link className="option" to="/">
