@@ -6,14 +6,10 @@
 
   .new-arrivals-header {
     width: 100%;
-  }
-  
-  .product-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: -20px; 
+
+    h1 {
+      padding: 20px;
+    }
   }
 
 }

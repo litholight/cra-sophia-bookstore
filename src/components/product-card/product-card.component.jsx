@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import moment from "moment";
 
 import CustomButton from "../custom-button/custom-button.component";
 import { addItem } from "../../redux/cart/cart.actions";
@@ -10,13 +11,13 @@ const ProductCard = ({ item, addItem }) => {
   const { productImage, title, price } = item;
   return (
     <div className="product-card">
-      <div
-        className="image"
-        style={{
-          backgroundImage: `url(${productImage})`
-        }}
-      />
       <div className="product-title">{title}</div>
+      <div className="image-container">
+        <img src={productImage} alt="item" />
+      </div>
+      <div className="product-info">
+        Added {moment(item.createdAt, "MMDDYYYY").fromNow()}
+      </div>
       <CustomButton onClick={() => addItem(item)}>
         {" "}
         Add to Cart ${price}
