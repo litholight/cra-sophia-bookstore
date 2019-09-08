@@ -7,7 +7,7 @@ import { createStructuredSelector } from "reselect";
 
 import "./header.styles.scss";
 import { selectCurrentUser } from "../../redux/user/user.selector";
-import { selectCartHidden } from "../../redux/cart/cart.selector";
+import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
 const Header = ({ currentUser, hidden }) => (
   <div className="header">

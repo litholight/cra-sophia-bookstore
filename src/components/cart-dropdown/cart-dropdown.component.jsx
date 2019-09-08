@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { selectCartItems } from "../../redux/cart/cart.selector";
+import { selectCartItems } from "../../redux/cart/cart.selectors";
 import { createStructuredSelector } from "reselect";
 import { withRouter } from "react-router-dom";
 
