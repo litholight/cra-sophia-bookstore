@@ -1,32 +1,25 @@
 import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
+import { selectNewArrivalsBooks } from "../../redux/new-arrivals/new-arrivals.selectors";
 
 import ProductCard from "../product-card/product-card.component";
-
-import PRODUCT_DATA from "../../product-data";
-
 import "./new-arrivals.styles.scss";
 
-class NewArrivals extends React.Component {
-  constructor(props) {
-    super(props);
+const NewArrivals = ({ books }) => (
+  <div className="new-arrivals-container">
+    <div className="new-arrivals-header">
+      <h1>New Arrivals</h1>
+    </div>
+    {books.map(item => (
+      <ProductCard key={item.id} item={item} />
+    ))}
+  </div>
+);
 
-    this.state = {
-      bookData: PRODUCT_DATA
-    };
-  }
+const mapStateToProps = createStructuredSelector({
+  books: selectNewArrivalsBooks
+});
 
-  render() {
-    return (
-      <div className="new-arrivals-container">
-        <div className="new-arrivals-header">
-          <h1>New Arrivals</h1>
-        </div>
-        {this.state.bookData.map(item => (
-          <ProductCard key={item.id} item={item} />
-        ))}
-      </div>
-    );
-  }
-}
-
-export default NewArrivals;
+export default connect(mapStateToProps)(NewArrivals);
