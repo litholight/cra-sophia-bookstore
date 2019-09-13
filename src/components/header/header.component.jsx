@@ -11,10 +11,15 @@ import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
 const Header = ({ currentUser, hidden }) => (
   <div className="header">
-    <div className="store-name">Sophia's Bookstore</div>
+    <Link className="store-name" to="/">
+      Sophia's Bookstore
+    </Link>
     <div className="options">
-      <Link className="option" to="/">
+      <Link className="option" to="/shop">
         SHOP
+      </Link>
+      <Link className="option" to="/new-Arrivals">
+        NEW ARRIVALS
       </Link>
       <Link className="option" to="/">
         CONTACT

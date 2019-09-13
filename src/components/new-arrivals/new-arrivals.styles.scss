@@ -1,7 +1,7 @@
 .new-arrivals-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  justify-content: space-between;
 
 
   .new-arrivals-header {
