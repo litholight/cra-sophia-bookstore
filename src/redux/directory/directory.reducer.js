@@ -2,35 +2,35 @@ const INITIAL_STATE = {
   sections: [
     {
       title: "Philsophy of Science",
-      productImage: "/book-images/philoScienceCentral.jpg",
+      imageUrl: "/book-images/philoScienceCentral.jpg",
       id: 1,
-      linkUrl: "hats"
-    },
-    {
-      title: "History",
-      productImage: "/book-images/IDC.jpg",
-      id: 2,
-      linkUrl: "shop/jackets"
-    },
-    {
-      title: "Philosophy",
-      productImage: "/book-images/IDC.jpg",
-      id: 3,
-      linkUrl: "shop/sneakers"
+      linkUrl: "shop/philoscience"
     },
     {
       title: "Old Testament",
-      productImage: "/book-images/ancientisrael.png",
+      imageUrl: "/book-images/ancientisrael.png",
+      id: 2,
+      linkUrl: "shop/oldtestament"
+    },
+    {
+      title: "Philosophy",
+      imageUrl: "/book-images/IDC.jpg",
+      id: 3,
+      linkUrl: "shop/philosophy"
+    },
+    {
+      title: "History",
+      imageUrl: "/book-images/IDC.jpg",
       size: "large",
       id: 4,
-      linkUrl: "shop/womens"
+      linkUrl: "shop/history"
     },
     {
       title: "Existentialism",
-      productImage: "/book-images/IDC.jpg",
+      imageUrl: "/book-images/IDC.jpg",
       size: "large",
       id: 5,
-      linkUrl: "shop/mens"
+      linkUrl: "shop/existentialism"
     }
   ]
 };

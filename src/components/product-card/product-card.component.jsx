@@ -8,12 +8,12 @@ import { addItem } from "../../redux/cart/cart.actions";
 import "./product-card.styles.scss";
 
 const ProductCard = ({ item, addItem }) => {
-  const { productImage, title, price } = item;
+  const { imageUrl, title, price } = item;
   return (
     <div className="product-card">
       <div className="product-title">{title}</div>
       <div className="image-container">
-        <img src={productImage} alt="item" />
+        <img src={imageUrl} alt="item" />
       </div>
       <div className="product-info">
         Added {moment(item.createdAt, "MMDDYYYY").fromNow()}
