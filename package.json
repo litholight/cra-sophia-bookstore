@@ -18,7 +18,7 @@
     "redux-persist": "^6.0.0",
     "reselect": "^4.0.0",
     "sass": "^1.22.10",
-    "set-value": "^3.0.1",
+    "set-value": "^4.0.1",
     "typeface-roboto": "^0.0.75"
   },
   "scripts": {
